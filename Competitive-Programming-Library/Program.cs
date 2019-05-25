@@ -12,7 +12,7 @@ namespace CPL
     {
         static void Main(string[] args)
         {
-            var a =  Console.ReadLine().TryParse<int>();
+            var a = Console.ReadLine().SplitTryParseToList<int>();
             Console.WriteLine(a.GetType());
 
         }
@@ -40,6 +40,11 @@ namespace CPL
             {
                 throw new InvalidCastException(typeof(T) + " is not suported.");
             }
+        }
+
+        public static List<T> SplitTryParseToList<T>(this string input)
+        {
+            return input.Split().Select(n => n.TryParse<T>()).ToList();
         }
 
         public static List<T> Aa<Tsouse, T>(this Tsouse str)
