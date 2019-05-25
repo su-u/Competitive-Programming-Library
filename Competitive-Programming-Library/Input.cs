@@ -45,12 +45,6 @@ namespace CPL.Input
             return input.Split().Select(n => n.TryParse<T>()).ToList();
         }
 
-        public static List<T> Aa<Tsouse, T>(this Tsouse str)
-        {
-            List<T> list = new List<T>();
-            return list;
-        }
-
         public static Int32 ParseToInt32(this String str)
         {
             return Int32.Parse(str);
