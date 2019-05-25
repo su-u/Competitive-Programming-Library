@@ -1,4 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+using System.ComponentModel;
 
 namespace CPL
 {
@@ -6,8 +12,8 @@ namespace CPL
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            "1".ParseToInt32();
+            var a =  Console.ReadLine().TryParse<int>();
+            Console.WriteLine(a.GetType());
 
         }
 
@@ -16,12 +22,38 @@ namespace CPL
 
     static class Extensions
     {
-        public static Int32 ParseToInt32(this string str)
+        public static T TryParse<T>(this string input)
+        {
+            try
+            {
+                var converter = TypeDescriptor.GetConverter(typeof(T));
+                if (converter != null)
+                {
+                    return (T)converter.ConvertFromString(input);
+                }
+                else
+                {
+                    throw new InvalidCastException("");
+                }
+            }
+            catch
+            {
+                throw new InvalidCastException(typeof(T) + " is not suported.");
+            }
+        }
+
+        public static List<T> Aa<Tsouse, T>(this Tsouse str)
+        {
+            List<T> list = new List<T>();
+            return list;
+        }
+
+        public static Int32 ParseToInt32(this String str)
         {
             return Int32.Parse(str);
         }
 
-        public static Double ParseToDouble(this string str)
+        public static Double ParseToDouble(this String str)
         {
             return Double.Parse(str);
         }
