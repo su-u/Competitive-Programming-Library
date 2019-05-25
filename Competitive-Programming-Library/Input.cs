@@ -44,15 +44,5 @@ namespace CPL.Input
         {
             return input.Split().Select(n => n.TryParse<T>()).ToList();
         }
-
-        public static Int32 ParseToInt32(this String str)
-        {
-            return Int32.Parse(str);
-        }
-
-        public static Double ParseToDouble(this String str)
-        {
-            return Double.Parse(str);
-        }
     }
 }
