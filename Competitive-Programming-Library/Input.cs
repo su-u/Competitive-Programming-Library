@@ -44,5 +44,7 @@ namespace CPL.Input
         {
             return input.Split().Select(n => n.TryParse<T>()).ToList();
         }
+
+        
     }
 }
