@@ -45,6 +45,14 @@ namespace CPL.Input
             return input.Split().Select(n => n.TryParse<T>()).ToList();
         }
 
+        /// <summary>
+        /// リスト内部の指定した要素同士を交換する。
+        /// </summary>
+        /// <typeparam name="T">リストの型</typeparam>
+        /// <param name="list">交換する対象のリスト</param>
+        /// <param name="index1">交換する要素番号</param>
+        /// <param name="index2">交換する要素番号</param>
+        /// <returns></returns>
         public static List<T> ListSwap<T>(this List<T> list, Int32 index1, Int32 index2)
         {
             var t = list[index1];
