@@ -9,15 +9,27 @@ using CPL.Input;
 
 namespace CPL
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
-            var a = Console.ReadLine().SplitTryParseToList<int>();
-            Console.WriteLine(a.GetType());
+            var list = new List<int>() { 1,2,3,4};
+            list.ListSwap(0, 1);
+
+            foreach(var i in list)
+            {
+                Console.WriteLine(i);
+            }
+
 
         }
-
+        public static List<T> ListSwap<T>(this List<T> list, Int32 index1, Int32 index2)
+        {
+            var t = list[index1];
+            list[index1] = list[index2];
+            list[index2] = t;
+            return list;
+        }
 
     }
 }

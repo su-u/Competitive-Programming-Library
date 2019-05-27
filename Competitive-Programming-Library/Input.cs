@@ -14,7 +14,7 @@ namespace CPL.Input
         /// <typeparam name="T">変換後の型</typeparam>
         /// <param name="input">変換する文字列</param>
         /// <returns>キャストされた値</returns>
-        public static T TryParse<T>(this string input)
+        public static T TryParse<T>(this String input)
         {
             try
             {
@@ -40,11 +40,17 @@ namespace CPL.Input
         /// <typeparam name="T">変換後の型</typeparam>
         /// <param name="input">変換する文字列</param>
         /// <returns>キャストされた値のリスト</returns>
-        public static List<T> SplitTryParseToList<T>(this string input)
+        public static List<T> SplitTryParseToList<T>(this String input)
         {
             return input.Split().Select(n => n.TryParse<T>()).ToList();
         }
 
-        
+        public static List<T> ListSwap<T>(this List<T> list, Int32 index1, Int32 index2)
+        {
+            var t = list[index1];
+            list[index1] = list[index2];
+            list[index2] = t;
+            return list;
+        }
     }
 }
