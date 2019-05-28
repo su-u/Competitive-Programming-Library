@@ -60,5 +60,18 @@ namespace CPL.Input
             list[index2] = t;
             return list;
         }
+
+        public static List<Tuple<T, int>> DuplicateCount<T>(this List<T> list)
+        {
+            return list
+                .GroupBy(i => i)
+                .Where(g => g.Count() >= 1)
+                .Select(g => Tuple.Create(g.Key, g.Count()))
+                .ToList();
+        }
+        public static List<Tuple<T, int>> DuplicateSort<T>(this List<Tuple<T, int>> list)
+        {
+            return list.OrderByDescending((x) => x.Item2).ToList();
+        }
     }
 }
