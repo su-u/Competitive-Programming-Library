@@ -45,6 +45,17 @@ namespace CPL.Input
             return input.Split().Select(n => n.TryParse<T>()).ToList();
         }
 
+        public static List<T> ReadLineOne<T>(int n)
+        {
+            var list = new List<T>();
+            foreach (var i in Enumerable.Range(1, n))
+            {
+                list.Add(Console.ReadLine().TryParse<T>());
+            }
+            return list;
+        }
+    }
+    static class List {
         /// <summary>
         /// リスト内部の指定した要素同士を交換する。
         /// </summary>
@@ -52,7 +63,7 @@ namespace CPL.Input
         /// <param name="list">交換する対象のリスト</param>
         /// <param name="index1">交換する要素番号</param>
         /// <param name="index2">交換する要素番号</param>
-        /// <returns></returns>
+        /// <returns></returns
         public static List<T> ListSwap<T>(this List<T> list, Int32 index1, Int32 index2)
         {
             var t = list[index1];
