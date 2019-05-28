@@ -16,10 +16,7 @@ namespace CPL
             var list = new List<int>() { 1,2,3,4};
             list.ListSwap(0, 1);
 
-            foreach(var i in list)
-            {
-                Console.WriteLine(i);
-            }
+            list.PrintAll();
 
 
         }
@@ -29,6 +26,14 @@ namespace CPL
             list[index1] = list[index2];
             list[index2] = t;
             return list;
+        }
+
+        public static void PrintAll<T>(this IEnumerable<T> list)
+        {
+            foreach (var i in list)
+            {
+                Console.Write($"{i} ");
+            }
         }
 
     }

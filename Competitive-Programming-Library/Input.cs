@@ -84,5 +84,13 @@ namespace CPL.Input
         {
             return list.OrderByDescending((x) => x.Item2).ToList();
         }
+
+        public static void PrintAll<T>(this IEnumerable<T> list)
+        {
+            foreach(var i in list)
+            {
+                Console.Write($"{i} ");
+            }
+        }
     }
 }
