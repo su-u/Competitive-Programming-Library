@@ -21,7 +21,7 @@ namespace CPL.Input
             }
         }
 
-        public static List<T> SplitTryParseToList<T>(this string input, string separator = "")
+        public static List<T> SplitTryParseToList<T>(this string input, char separator = ' ')
         {
             return input.Split(separator).Select(n => n.TryParse<T>()).ToList();
         }
