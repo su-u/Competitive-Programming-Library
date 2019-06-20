@@ -26,7 +26,7 @@ namespace CPL.Input
             return input.Split(separator).Select(n => n.TryParse<T>()).ToList();
         }
 
-        public static List<T> ListSwap<T>(this List<T> list, Int32 index1, Int32 index2)
+        public static List<T> ListSwap<T>(this List<T> list, int index1, int index2)
         {
             var t = list[index1];
             list[index1] = list[index2];
