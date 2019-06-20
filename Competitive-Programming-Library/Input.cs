@@ -13,18 +13,11 @@ namespace CPL.Input
             try
             {
                 var converter = TypeDescriptor.GetConverter(typeof(T));
-                if (converter != null)
-                {
-                    return (T)converter.ConvertFromString(input);
-                }
-                else
-                {
-                    throw new InvalidCastException("");
-                }
+                return (T)converter.ConvertFromString(input);
             }
             catch
             {
-                throw new InvalidCastException(typeof(T) + " is not suported.");
+                throw new InvalidCastException(typeof(T) + " is not supported.");
             }
         }
 
