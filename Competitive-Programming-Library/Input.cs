@@ -8,7 +8,7 @@ namespace CPL.Input
 {
     static class Input
     {
-        public static T TryParse<T>(this String input)
+        public static T TryParse<T>(this string input)
         {
             try
             {
@@ -21,9 +21,9 @@ namespace CPL.Input
             }
         }
 
-        public static List<T> SplitTryParseToList<T>(this String input)
+        public static List<T> SplitTryParseToList<T>(this string input, string separator = "")
         {
-            return input.Split().Select(n => n.TryParse<T>()).ToList();
+            return input.Split(separator).Select(n => n.TryParse<T>()).ToList();
         }
 
         public static List<T> ListSwap<T>(this List<T> list, Int32 index1, Int32 index2)
