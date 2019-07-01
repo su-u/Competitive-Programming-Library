@@ -60,5 +60,10 @@ namespace CPL.Input
                 Console.Write($"{i} ");
             }
         }
+
+        public static string Reversed(this string s)
+        {
+            return string.Join("", s.Reverse());
+        }
     }
 }
