@@ -44,16 +44,11 @@ namespace CPL.Input
         }
         public static List<Tuple<T, int>> DuplicateSort<T>(this IEnumerable<Tuple<T, int>> list)
         {
-            return list.OrderByDescending((x) => x.Item2).ToList();
+            return list.OrderByDescending(x => x.Item2).ToList();
         }
         public static List<T> ReadLineOne<T>(int n)
         {
-            var list = new List<T>();
-            foreach (var i in Enumerable.Range(1, n))
-            {
-                list.Add(Console.ReadLine().TryParse<T>());
-            }
-            return list;
+            return Enumerable.Range(1, n).Select(i => Console.ReadLine().TryParse<T>()).ToList();
         }
         public static void PrintAll<T>(this IEnumerable<T> list)
         {
