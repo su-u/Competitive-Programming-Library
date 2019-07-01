@@ -11,7 +11,7 @@ namespace CPL
 {
     static class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var list = new List<int>() { 1,2,3,4};
             list.ListSwap(0, 1);
