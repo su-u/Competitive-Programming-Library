@@ -38,7 +38,6 @@ namespace CPL.Input
         {
             return list
                 .GroupBy(i => i)
-                .Where(g => g.Any())
                 .Select(g => Tuple.Create(g.Key, g.Count()))
                 .ToList();
         }
