@@ -9,7 +9,7 @@ using CPL.Input;
 
 namespace CPL
 {
-    static class Program
+    class Program
     {
         private static void Main(string[] args)
         {
@@ -20,21 +20,5 @@ namespace CPL
 
 
         }
-        public static List<T> ListSwap<T>(this List<T> list, Int32 index1, Int32 index2)
-        {
-            var t = list[index1];
-            list[index1] = list[index2];
-            list[index2] = t;
-            return list;
-        }
-
-        public static void PrintAll<T>(this IEnumerable<T> list)
-        {
-            foreach (var i in list)
-            {
-                Console.Write($"{i} ");
-            }
-        }
-
     }
 }
