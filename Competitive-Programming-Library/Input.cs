@@ -6,7 +6,7 @@ using System.Text;
 
 namespace CPL.Input
 {
-    static class Input
+    static class InputEx
     {
         public static T TryParse<T>(this string input)
         {
