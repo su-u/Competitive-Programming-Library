@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
 
 namespace CPL
 {
-    namespace CPL.Input
+    namespace Input
     {
         public static class InputEx
         {
@@ -35,9 +34,9 @@ namespace CPL
         }
     }
 
-    namespace CPL.Collections
+    namespace Collections
     {
-        static class CollectionsEx
+        public static class CollectionsEx
         {
             public static List<Tuple<T, int>> DuplicateCount<T>(this IEnumerable<T> list)
             {
@@ -70,7 +69,7 @@ namespace CPL
         }
     }
 
-    namespace CPL.String
+    namespace String
     {
         public static class StringEx
         {
