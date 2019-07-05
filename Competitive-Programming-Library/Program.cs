@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.ComponentModel;
+using CPL.Collections;
 using CPL.Input;
 using CPL.String;
 
@@ -14,12 +15,9 @@ namespace CPL
     {
         private static void Main(string[] args)
         {
-            var list = new List<int>() { 1,2,3,4};
+            var list = new List<int>(10) { 1,2,3,4};
             list.ListSwap(0, 1);
-
             list.PrintAll();
-
-
         }
     }
 }
