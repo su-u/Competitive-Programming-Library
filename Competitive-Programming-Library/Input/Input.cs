@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace CPL.Input
 {
-    static class InputEx
+    public static class InputEx
     {
         public static T TryParse<T>(this string input)
         {
@@ -57,11 +57,6 @@ namespace CPL.Input
             {
                 Console.Write($"{i} ");
             }
-        }
-
-        public static string Reversed(this string s)
-        {
-            return string.Join("", s.Reverse());
         }
     }
 }
