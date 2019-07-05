@@ -1,6 +1,12 @@
-﻿namespace CPL.String
+﻿using System.Linq;
+
+namespace CPL.String
 {
-    class StringEx
+    public static class StringEx
     {
+        public static string Reversed(this string s)
+        {
+            return string.Join("", s.Reverse());
+        }
     }
 }
