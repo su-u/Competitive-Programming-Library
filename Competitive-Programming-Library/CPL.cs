@@ -46,7 +46,7 @@ namespace CPL
                     .ToList();
             }
 
-            public static List<Tuple<T, int>> DuplicateSort<T>(this IEnumerable<Tuple<T, int>> list)
+            public static List<Tuple<T, int>> DuplicateOrderByDescending<T>(this IEnumerable<Tuple<T, int>> list)
             {
                 return list.OrderByDescending(x => x.Item2).ToList();
             }
