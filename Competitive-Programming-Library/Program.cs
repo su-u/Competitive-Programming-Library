@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.ComponentModel;
 using CPL.Input;
+using CPL.String;
 
 namespace CPL
 {
