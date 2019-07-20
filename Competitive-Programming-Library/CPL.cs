@@ -6,6 +6,12 @@ using System.Text;
 using static System.Math;
 using static System.Console;
 
+using static CPL.Input.IO;
+using CPL.Input;
+using CPL.Collections;
+using CPL.String;
+
+
 namespace CPL
 {
     namespace Input
@@ -15,6 +21,11 @@ namespace CPL
             public static T RL<T>()
             {
                 return Console.ReadLine().Trim().TryParse<T>();
+            }
+
+            public static List<T> RLL<T>()
+            {
+                return Console.ReadLine().TrySplitParseToList<T>();
             }
 
             public static void WL(string s)
