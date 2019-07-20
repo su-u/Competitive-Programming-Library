@@ -10,8 +10,22 @@ namespace CPL
 {
     namespace Input
     {
+        public static class IO
+        {
+            public static T RL<T>()
+            {
+                return Console.ReadLine().Trim().TryParse<T>();
+            }
+
+            public static void WL(string s)
+            {
+                Console.WriteLine(s);
+            }
+        }
+
         public static class InputEx
         {
+
             public static T TryParse<T>(this string input)
             {
                 try
@@ -25,7 +39,7 @@ namespace CPL
                 }
             }
 
-            public static List<T> SplitTryParseToList<T>(this string input, char separator = ' ')
+            public static List<T> TrySplitParseToList<T>(this string input, char separator = ' ')
             {
                 return input.Split(separator).Select(TryParse<T>).ToList();
             }
