@@ -32,6 +32,16 @@ namespace CPL
             {
                 Console.WriteLine(s);
             }
+
+            public static void WL(int s)
+            {
+                Console.WriteLine(s);
+            }
+
+            public static void WL(double s)
+            {
+                Console.WriteLine(s);
+            }
         }
 
         public static class InputEx
