@@ -48,6 +48,11 @@ namespace CPL
             {
                 return Enumerable.Range(1, n).Select(i => Console.ReadLine().TryParse<T>()).ToList();
             }
+            
+            public static List<TResult> ReadLineMulti<TSource, TResult>(int n, Func<TResult> func)
+            {
+                return Enumerable.Range(1, n).Select(i => func()).ToList();
+            }
         }
     }
 
