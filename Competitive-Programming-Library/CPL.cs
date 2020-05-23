@@ -24,8 +24,37 @@ namespace CPL
 {
     namespace Input
     {
+        public static class IO
+        {
+            public static T RL<T>()
+            {
+                return Console.ReadLine().Trim().TryParse<T>();
+            }
+
+            public static List<T> RLL<T>()
+            {
+                return Console.ReadLine().TrySplitParseToList<T>();
+            }
+
+            public static void WL(string s)
+            {
+                Console.WriteLine(s);
+            }
+
+            public static void WL(int s)
+            {
+                Console.WriteLine(s);
+            }
+
+            public static void WL(double s)
+            {
+                Console.WriteLine(s);
+            }
+        }
+
         public static class InputEx
         {
+
             public static T TryParse<T>(this string input)
             {
                 try
@@ -101,6 +130,4 @@ namespace CPL
             }
         }
     }
-
-
 }
