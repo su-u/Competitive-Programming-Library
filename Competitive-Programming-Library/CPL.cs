@@ -5,6 +5,7 @@ using System.Linq;
 using static System.Console;
 using static System.Math;
 
+using static CPL.Input.IO;
 using static CPL.Input.InputEx;
 using static CPL.String.StringEx;
 using static CPL.Collections.CollectionsEx;
