@@ -29,17 +29,18 @@ namespace CPL
         {
             public static T RL<T>()
             {
-                return Console.ReadLine().Trim().TryParse<T>();
+                var line = ReadLine() ?? throw new Exception();
+                return line.Trim().TryParse<T>();
             }
 
             public static List<T> RLL<T>()
             {
-                return Console.ReadLine().TrySplitParseToList<T>();
+                return ReadLine().TrySplitParseToList<T>();
             }
 
             public static void WL<T>(T s)
             {
-                Console.WriteLine(s);
+                WriteLine(s);
             }
         }
 
