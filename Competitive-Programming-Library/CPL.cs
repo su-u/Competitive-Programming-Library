@@ -106,7 +106,7 @@ namespace CPL
             {
                 foreach (var i in list)
                 {
-                    Console.Write($"{i} ");
+                    Write($"{i} ");
                 }
             }
         }
