@@ -37,17 +37,7 @@ namespace CPL
                 return Console.ReadLine().TrySplitParseToList<T>();
             }
 
-            public static void WL(string s)
-            {
-                Console.WriteLine(s);
-            }
-
-            public static void WL(int s)
-            {
-                Console.WriteLine(s);
-            }
-
-            public static void WL(double s)
+            public static void WL<T>(T s)
             {
                 Console.WriteLine(s);
             }
